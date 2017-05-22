@@ -1,0 +1,15 @@
+omelette
+2
+eggs | 2 | th
+tomato | 100 | gr
+steak
+3
+beef | 300 | gr
+spices | 5 | gr
+oil | 10 | ml
+salad
+4
+tomatoes | 100 | gr
+cucumbers | 100 | gr
+oil | 100 | ml
+onions | 1 | th
