@@ -1,19 +1,12 @@
-def del_n(string):
-  new_string = ''
-  for letter in string:
-    if letter != '\n':
-      new_string += letter
-  return new_string
-
 def create_cook_book():
   with open('cook_book.txt') as f:
     cook_book = {}
     for line in f:
-      dish = del_n(line)
+      dish = line.strip()
       cook_book[dish] = []
-      quantity = int(del_n(f.readline()))
+      quantity = int(f.readline().strip())
       for i in range(quantity):
-        ingredient = del_n(f.readline())
+        ingredient = f.readline().strip()
         ingredient_line = ingredient.split(' | ')
         new_dict = {}
         new_dict['ingridient_name'] = ingredient_line[0]
