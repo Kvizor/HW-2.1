@@ -2,8 +2,8 @@ def create_cook_book():
   with open('cook_book.txt') as f:
     cook_book = {}
     for line in f:
-      dish = line.strip()
-      cook_book[dish] = []
+      line = line.strip()
+      cook_book[line] = []
       quantity = int(f.readline().strip())
       for i in range(quantity):
         ingredient = f.readline().strip()
@@ -12,7 +12,7 @@ def create_cook_book():
         new_dict['ingridient_name'] = ingredient_line[0]
         new_dict['quantity'] = int(ingredient_line[1])
         new_dict['measure'] = ingredient_line[2] + '.'
-        cook_book[dish].append(new_dict)
+        cook_book[line].append(new_dict)
   return cook_book
 
 def get_shop_list_by_dishes(dishes, person_count, cook_book):
