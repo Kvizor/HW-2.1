@@ -6,12 +6,11 @@ def create_cook_book():
       cook_book[line] = []
       quantity = int(f.readline().strip())
       for i in range(quantity):
-        ingredient = f.readline().strip()
-        ingredient_line = ingredient.split(' | ')
+        ingredient = f.readline().strip().split(' | ')
         new_dict = {}
-        new_dict['ingridient_name'] = ingredient_line[0]
-        new_dict['quantity'] = int(ingredient_line[1])
-        new_dict['measure'] = ingredient_line[2] + '.'
+        new_dict['ingridient_name'] = ingredient[0]
+        new_dict['quantity'] = int(ingredient[1])
+        new_dict['measure'] = ingredient[2] + '.'
         cook_book[line].append(new_dict)
   return cook_book
 
